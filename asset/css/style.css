@@ -1,31 +1,58 @@
 @import url(global.css);
 
-
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 50px;
-    box-shadow: 0.5px 0.5px 5px rgba(128, 128, 128, 0.493);
-}
-nav .logo img{
-    max-width: 200px;
-}
-nav ul{
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-nav ul li a {
-    text-decoration: none;
-    color: var(--text-dark-color);
-    transition: all 0.3s ease-in-out;
-}
-nav ul li a:hover {
-    color: var(--primary-color);
+.nav-container{
+    padding: 0.5rem 15rem;
 }
 
-@media screen and (max-width:784px){
+header{
+    background-color: var(--background-color);
+    box-shadow: 0 3px 5px grey;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav .logo img{
+        max-width: 200px;
+    }
+    nav ul{
+        display: flex;
+        list-style: none;
+        gap: 30px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--text-light-color);
+        transition: all 0.1s ease-in;
+    }
+    nav ul li a:hover {
+        color: var(--text-secondary-color);
+    }
+}
+
+main{
+    display: flex;
+    #side{
+        background-color: var(--primary-color);
+        width: 20vw;
+        height: 100vh;
+    }
+    #content {
+        width: 100vw;
+        background-color: aqua;
+        height: 100vh;
+    }
+}
+
+footer{
+    background-color: var(--secondary-color);
+    height: 100px;
+}
+
+
+@media screen and (max-width:1200px){
     nav{
         flex-direction: column;
     }

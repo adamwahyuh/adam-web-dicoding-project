@@ -3,14 +3,19 @@
 
 
 :root{
-    --primary-color: rgb(233, 25, 105);
-    --secondary-color: ;
-    --text-light-color: ;
-    --text-dark-color: ;
+    --primary-color: #CF1E51;
+    --secondary-color: #FFC107;
+    --background-color: #CF1E51;
+
+    --text-secondary-color: #FFC107;
+    --text-primary-color: #CF1E51;
+    
+    --text-light-color: #F1F1F1;
+    --text-dark-color: #333;
 }
 
 *{
-    font-family: 'Pacifico', sans-serif;
+    font-family: 'Montserrat','Pacifico', sans-serif;
     padding: 0;
     margin: 0;
 }
