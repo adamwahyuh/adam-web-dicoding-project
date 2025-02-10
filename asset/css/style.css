@@ -1,2 +1,32 @@
 @import url(global.css);
 
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    box-shadow: 0.5px 0.5px 5px rgba(128, 128, 128, 0.493);
+}
+nav .logo img{
+    max-width: 200px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark-color);
+    transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+@media screen and (max-width:784px){
+    nav{
+        flex-direction: column;
+    }
+}
