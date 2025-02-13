@@ -63,7 +63,7 @@ footer{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 2rem;
     }
     .footer-container .logo img{
         max-width: 250px;
@@ -75,6 +75,10 @@ footer{
     ul li a{
         text-decoration: none;
         color: var(--text-light-color);
+    }
+    .links ul li a{
+        display: flex;
+        gap: 2px;
     }
     ul {
         list-style-type: none;
@@ -111,5 +115,14 @@ footer{
 
 }
 
+@media screen and (max-width:768px){
 
-  
+    footer .footer-container{
+        /* flex-direction: column; */
+        flex:1;
+        align-items: flex-start;
+    }
+    .links {
+        flex-direction: column;
+    }
+}  
