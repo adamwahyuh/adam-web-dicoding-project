@@ -1,20 +1,17 @@
 @import url(global.css);
 
-.nav-container{
-    padding: 0.5rem 15rem;
-}
 
 header{
     background-color: var(--background-color);
     box-shadow: 0 3px 5px grey;
-
+    
+    .nav-container{
+        padding: 0.7rem 0;
+    }
     nav{
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-    nav .logo img{
-        max-width: 200px;
     }
     nav ul{
         display: flex;
@@ -33,23 +30,15 @@ header{
 }
 
 main{
-    display: flex;
-    #side{
-        background-color: var(--primary-color);
-        width: 20vw;
-        height: 100vh;
-    }
-    #content {
-        width: 100vw;
-        background-color: white;
-        height: 100vh;
-    }
+    min-height: 100vh;
+    max-height: 100%;
 }
 
 footer{
     padding: 2rem 0;
     background-color: var(--primary-color);
 
+    width: 100%;
     gap: 1rem;
     display: flex;
     flex-direction: column;
@@ -64,9 +53,18 @@ footer{
         flex-direction: row;
         justify-content: space-between;
         gap: 2rem;
+        
+        width: 100%;
+        max-width: 1200px;
     }
-    .footer-container .logo img{
-        max-width: 250px;
+    .f-logo{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .footer-container .f-logo p{
+        width: 75%;
+        text-align: start;
     }
     .links{
         display: flex;
@@ -75,6 +73,9 @@ footer{
     ul li a{
         text-decoration: none;
         color: var(--text-light-color);
+    }
+    ul li a:hover{
+        color: var(--text-secondary-color);
     }
     .links ul li a{
         display: flex;
@@ -95,6 +96,14 @@ footer{
         color: var(--text-secondary-color);
         text-decoration: none;
         font-weight: 600;
+        transition: all 0.3s ease-in-out;
+    }
+    .yapping a:hover{
+        background-color: #fff;
+        padding: 3px 3px;
+        border-radius: 5px;
+
+        color: var(--primary-color);
     }
 }
 
@@ -112,17 +121,20 @@ footer{
         flex-direction: column;
         align-items: center;
     }
+    .footer-container.logo p{
+        width: 100%;
+    }
 
 }
 
 @media screen and (max-width:768px){
 
     footer .footer-container{
-        /* flex-direction: column; */
-        flex:1;
+        flex-direction: column;
         align-items: flex-start;
     }
     .links {
         flex-direction: column;
     }
+    
 }  
