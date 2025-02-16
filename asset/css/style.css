@@ -4,7 +4,11 @@
 header{
     background-color: var(--background-color);
     box-shadow: 0 3px 5px grey;
-    
+
+    position: sticky;
+    top: 0;
+
+    z-index: 999;
     .nav-container{
         padding: 0.7rem 0;
     }
@@ -12,6 +16,7 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+
     }
     nav ul{
         display: flex;
@@ -29,10 +34,104 @@ header{
     }
 }
 
-main{
-    min-height: 100vh;
-    max-height: 100%;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .megatron {
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.199); 
+    }
+    .megatron::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(/asset/img/donut-home.jpg);
+        background-size: cover;
+        background-position: center;
+        filter: blur(7px); 
+        z-index: -1; 
+    }
+    .megatron article {
+        background: rgba(255, 255, 255, 0.1); 
+        backdrop-filter: blur(9px);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        color: var(--text-light-color);
+        
+        max-width: 700px;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .menu-welcome{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .menu-welcome h2 {
+        font-size: 2rem;
+        font-weight: 900;
+        /* color: var(--text-primary-color); */
+    }
+    .menu-welcome p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    .menu-button .btn {
+        font-size: 1.2rem;
+        color: white;
+        background: var(--primary-color);
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+    }
+    .menu-button .btn:hover {
+        background: var(--secondary-color);
+        transform: scale(1.1);
+    }
+    .highlight{
+        color: var(--text-secondary-color);
+    }
+
+    .flex-c{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        
+        #content, #side{
+            min-height: 100vh;
+        }
+        #content{
+            background-color: aqua;
+            flex: 3;
+        }
+        #side{
+            background-color: red;
+            flex: 1;
+        }
+    }
+
+    
 }
+
+
+
+
 
 footer{
     padding: 2rem 0;
