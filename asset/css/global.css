@@ -57,3 +57,12 @@
       width: 1170px;
     }
   }
+
+  /* ::-webkit-scrollbar{
+    width: 10px;
+    background: var(--primary-color) ;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: var(--secondary-color);
+    border-radius: 1rem;
+  } */
