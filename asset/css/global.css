@@ -58,6 +58,21 @@
     }
   }
 
+  .h2 h2{ 
+      color: var(--text-primary-color);
+      font-size: 3rem;
+  }
+  .margin-r-u{
+    margin: 30px 0  0 35px;
+  }
+
+  .list-none{
+    list-style-type: none;
+    a {
+      text-decoration: none;
+    }
+  }
+
   /* ::-webkit-scrollbar{
     width: 10px;
     background: var(--primary-color) ;
